@@ -25,4 +25,4 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/preheat-kitchen
+  base-directory: dist/sheptech
