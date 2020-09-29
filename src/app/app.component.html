@@ -1,4 +1,4 @@
-<div class="sheptech">
+<div *ngIf="!isLoading" class="sheptech">
   <sheptech-header class="sheptech-header"></sheptech-header>
   <div class="sheptech-banner">Build for tomorrow
     <button class="sheptech-banner__button">get started</button>
@@ -9,3 +9,10 @@
   </div>
 </div>
 
+<div hidden>
+  <img (load)="isLoading = false" src="assets/banner.png" alt="loading_image">
+</div>
+
+<div *ngIf="isLoading" class="sheptech__loading">
+    <div class="loader"></div>
+</div>
