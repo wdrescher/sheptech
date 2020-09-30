@@ -3,10 +3,28 @@
   <div class="sheptech-banner">Build for tomorrow
     <button class="sheptech-banner__button">get started</button>
   </div>
-  <div class="sheptech-content-container">
-    <div class="sheptech__subheader">About us</div>
-    <div class="sheptech__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  <div class="sheptech-content-about-us">
+    <div class="sheptech-content-about-us__title">About us</div>
+    <p class="sheptech__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
+
+  <div class="sheptech-services">
+    <div class="sheptech-content-container">
+      <div class="sheptech-services__title">Services</div>
+      <div class="sheptech-services__icon-row">
+        <div class="sheptech-services__icon-container" *ngFor="let icon of icons">
+          <img class="sheptech-services__icon" [src]="icon.url"/>
+          <div class="sheptech-services__icon-description">{{icon.description}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sheptech-contact">
+    <div class="sheptech-contact__title">Contact Us</div>
+    <sheptech-contact-form style="width: 100%"></sheptech-contact-form>
+  </div>
+  <sheptech-footer style="width: 100%"></sheptech-footer>
 </div>
 
 <div hidden>

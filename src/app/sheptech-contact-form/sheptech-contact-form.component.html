@@ -1,0 +1,17 @@
+<div class="sheptech-contact-form" [formGroup]="formGroup">
+    <div class="sheptech-contact-form-container">
+        <mat-form-field class="sheptech-contact-form__form-field" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [formControl]="formGroup.controls.name">
+        </mat-form-field>
+        <mat-form-field class="sheptech-contact-form__form-field" appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="formGroup.controls.email" required>
+          <mat-error *ngIf="formGroup.controls.email.invalid">Please enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field class="sheptech-contact-form__form-field" appearance="fill">
+            <mat-label>Coment</mat-label>
+            <textarea matInput [formControl]="formGroup.controls.comment" placeholder="Ex. I want to build an api..."></textarea>
+        </mat-form-field>
+    </div>
+  </div>

@@ -1,3 +1,5 @@
+$icon-height: 50px; 
+
 .sheptech {
     display: flex;
     justify-content: center;
@@ -47,22 +49,87 @@
     &-content-container {
         display: flex;
         flex-flow: column nowrap; 
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         width: 100%; 
         max-width: 60%; 
-        margin: auto; 
+        margin: 80px auto; 
+    }
+
+    &-services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #1D2951;
+
+        &__title {
+            @extend .sheptech__subheader;
+            color: white; 
+            margin-bottom: 40px; 
+        }
+
+        &__icon {
+            color: white; 
+            width: $icon-height;
+            height: $icon-height; 
+            min-width: $icon-height; 
+            min-height: $icon-height; 
+
+            &-row {
+                display: flex;
+                flex-flow: row wrap; 
+                justify-content: space-between;
+                align-items: center;
+                width: 80%; 
+            }
+
+            &-container {
+                display: flex;
+                flex-flow: column nowrap; 
+                justify-content: center;
+                align-items: center;
+                margin: 8px; 
+            }
+
+            &-description {
+                margin-top: 10px; 
+                color: white; 
+                font-size: 18px; 
+                text-transform: lowercase;
+                font-weight: 100;
+            }
+        }
+    }
+
+    &-content-about-us {
+        @extend .sheptech-content-container;
+        flex-flow: row wrap;
+
+        &__title {
+            @extend .sheptech__subheader;
+            margin-bottom: 20px; 
+        }
     }
 
     &__subheader {
-        color: black; 
-        font-size: 50px; 
+        font-weight: 100; 
+        text-transform: uppercase;
+        font-size: 40px; 
     }
 
     &__body {
         color: black; 
         font-size: 30px; 
         text-align: justify;
+        max-width: 70%;
+        line-height: 1.5;
+        font-weight: 100;
+        font-family: 'Merriweather', 'Roboto';
+
+        @media screen and (max-width: 500px) {
+            font-size: 18px;
+        }
     }
 
     &__loading {
@@ -73,72 +140,16 @@
         align-items: center;
         display: flex;
     }
-}
 
-.loader,
-.loader:before,
-.loader:after {
-  border-radius: 50%;
-}
-.loader {
-  color: #000000;
-  font-size: 11px;
-  text-indent: -99999em;
-  margin: 55px auto;
-  position: relative;
-  width: 10em;
-  height: 10em;
-  box-shadow: inset 0 0 0 1em;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-}
-.loader:before,
-.loader:after {
-  position: absolute;
-  content: '';
-}
-.loader:before {
-  width: 5.2em;
-  height: 10.2em;
-  background: white;
-  border-radius: 10.2em 0 0 10.2em;
-  top: -0.1em;
-  left: -0.1em;
-  -webkit-transform-origin: 5.1em 5.1em;
-  transform-origin: 5.1em 5.1em;
-  -webkit-animation: load2 1s infinite ease 1.5s;
-  animation: load2 1s infinite ease 1.5s;
-}
-.loader:after {
-  width: 5.2em;
-  height: 10.2em;
-  background: white;
-  border-radius: 0 10.2em 10.2em 0;
-  top: -0.1em;
-  left: 4.9em;
-  -webkit-transform-origin: 0.1em 5.1em;
-  transform-origin: 0.1em 5.1em;
-  -webkit-animation: load2 1s infinite ease;
-  animation: load2 1s infinite ease;
-}
-@-webkit-keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    &-contact {
+        @extend .sheptech-content-container;
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap; 
+        &__title {
+            margin: 40px auto; 
+            @extend .sheptech__subheader;
+        }
+    }
 }
