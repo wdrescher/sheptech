@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sheptech-navigation-buttons',
@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sheptech-navigation-buttons.component.scss']
 })
 export class SheptechNavigationButtonsComponent implements OnInit {
+  @Input() isAlternate: boolean;
 
   constructor() { }
-
+  items = [
+    {name: "about us", link:"about"}, 
+    {name: 'seperator'},
+    {name: "services", link: "services"}, 
+    {name: 'seperator'},
+    {name: "contact us", link: "contact"}
+  ]
   ngOnInit(): void {
   }
 

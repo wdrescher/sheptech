@@ -18,6 +18,10 @@ $color: black;
         border: $button-border-size solid transparent; 
         transition: border .2s ease-out;
         border-radius: 5px; 
+
+        &--alternate {
+            color: white;
+        }
     }
     
     &__item:hover {
@@ -32,9 +36,15 @@ $color: black;
         border: 0.1px solid $color; 
         margin: auto 30px; 
         border-left: unset; 
+
+        &--alternate {
+            border-color: white;
+        }
     
         @media screen and (max-width: 500px) {
             margin: auto 10px; 
         }
     }
+
+
 }

@@ -1,14 +1,8 @@
 <div class="sheptech-navigation-buttons">
-    <button>
-        <div class="sheptech-navigation-buttons__item" [ngxScrollTo]="'about'">About us</div>
+    <div *ngFor="let item of items">
+    <button *ngIf="item.name != 'seperator'">
+        <div class="sheptech-navigation-buttons__item" [ngClass]="{'sheptech-navigation-buttons__item--alternate': isAlternate}" [ngxScrollTo]="item.link">{{item.name}}</div>
     </button>
-    
-    <div class="sheptech-navigation-buttons__seperator"></div>
-    <button>
-        <div class="sheptech-navigation-buttons__item" [ngxScrollTo]="'services'">Services</div>
-    </button>
-    <div class="sheptech-navigation-buttons__seperator"></div>
-    <button>
-        <div class="sheptech-navigation-buttons__item" [ngxScrollTo]="'contact'">Contact</div>
-    </button>
+    <div *ngIf="item.name === 'seperator'" class="sheptech-navigation-buttons__seperator" [ngClass]="{'sheptech-navigation-buttons__seperator--alternate': isAlternate}"></div>
+    </div>
 </div>
