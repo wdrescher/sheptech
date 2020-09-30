@@ -79,7 +79,7 @@ $icon-height: 50px;
             &-row {
                 display: flex;
                 flex-flow: row wrap; 
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
                 width: 80%; 
             }
@@ -119,6 +119,7 @@ $icon-height: 50px;
     }
 
     &__body {
+        margin: auto; 
         color: black; 
         font-size: 30px; 
         text-align: justify;
@@ -128,7 +129,8 @@ $icon-height: 50px;
         font-family: 'Merriweather', 'Roboto';
 
         @media screen and (max-width: 500px) {
-            font-size: 18px;
+            font-size: 14px;
+            text-align: unset;
         }
     }
 

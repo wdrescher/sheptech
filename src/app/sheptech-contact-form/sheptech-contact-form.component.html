@@ -1,4 +1,4 @@
-<div class="sheptech-contact-form" [formGroup]="formGroup">
+<form class="sheptech-contact-form" [formGroup]="formGroup" (ngSubmit)="sendContactEmail(formGroup.value)">
     <div class="sheptech-contact-form-container">
         <mat-form-field class="sheptech-contact-form__form-field" appearance="fill">
             <mat-label>Name</mat-label>
@@ -13,5 +13,10 @@
             <mat-label>Coment</mat-label>
             <textarea matInput [formControl]="formGroup.controls.comment" placeholder="Ex. I want to build an api..."></textarea>
         </mat-form-field>
+        <button class="sheptech-contact-form__button" color="primary"type="Submit" mat-raised-button>
+            <div *ngIf="!success && !isLoading">Submit</div>
+            <div *ngIf="success"><img class="sheptech-contact-form__button-icon" src="assets/checked.svg" alt=""></div>
+            <div *ngIf="!success && isLoading" class="sheptech-contact-form__button-loader sheptech-loader"></div>
+        </button>
     </div>
-  </div>
+</form>

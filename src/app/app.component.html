@@ -1,14 +1,14 @@
 <div *ngIf="!isLoading" class="sheptech">
   <sheptech-header class="sheptech-header"></sheptech-header>
   <div class="sheptech-banner">Build for tomorrow
-    <button class="sheptech-banner__button">get started</button>
+    <button class="sheptech-banner__button" [ngxScrollTo]="'contact'">get started</button>
   </div>
   <div class="sheptech-content-about-us">
-    <div class="sheptech-content-about-us__title">About us</div>
+    <div class="sheptech-content-about-us__title" id="about">About us</div>
     <p class="sheptech__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
-  <div class="sheptech-services">
+  <div class="sheptech-services" id="services">
     <div class="sheptech-content-container">
       <div class="sheptech-services__title">Services</div>
       <div class="sheptech-services__icon-row">
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="sheptech-contact">
+  <div class="sheptech-contact" id="contact">
     <div class="sheptech-contact__title">Contact Us</div>
     <sheptech-contact-form style="width: 100%"></sheptech-contact-form>
   </div>

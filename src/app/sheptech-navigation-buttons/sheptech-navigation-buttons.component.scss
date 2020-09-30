@@ -1,4 +1,5 @@
 $button-border-size: 3px; 
+$color: black; 
 
 .sheptech-navigation-buttons {
     width: 100%;
@@ -9,6 +10,7 @@ $button-border-size: 3px;
     justify-content: center;
 
     &__item {
+        color: $color; 
         padding: 5px;
         font-size: 20px;
         font-weight: 100;
@@ -20,14 +22,14 @@ $button-border-size: 3px;
     
     &__item:hover {
         transition: border .5s ease-in;
-        border: $button-border-size solid black; 
+        border: $button-border-size solid $color; 
         border-radius: 5px; 
     }
     
     &__seperator{ 
         width: 0; 
         height: 15px; 
-        border: 0.1px solid black; 
+        border: 0.1px solid $color; 
         margin: auto 30px; 
         border-left: unset; 
     

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { SheptechContactService } from '../sheptech-contact.service';
 
 @Component({
   selector: 'sheptech-contact-form',
@@ -8,8 +9,12 @@ import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class SheptechContactFormComponent implements OnInit {
   formGroup: FormGroup; 
-
-  constructor(private formBuilder: FormBuilder) {}
+  success = false; 
+  isLoading  = false; 
+  constructor(
+    private formBuilder: FormBuilder, 
+    private sheptechContactService: SheptechContactService
+  ) {}
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
@@ -17,5 +22,18 @@ export class SheptechContactFormComponent implements OnInit {
       email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
       comment: new FormControl('', [Validators.required])
     }) 
+  }
+
+  sendContactEmail(input): void {
+    if (input.comment && !this.isLoading && !this.success) {
+      this.isLoading = true; 
+      this.sheptechContactService.sendContactEmail(input).subscribe(
+        (response) => {
+          this.success = true, 
+          this.isLoading = false; 
+        }, 
+        (error) => {}
+      ); 
+    }
   }
 }

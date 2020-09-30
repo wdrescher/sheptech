@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SheptechContactServiceService } from './sheptech-contact-service.service';
+import { SheptechContactService } from './sheptech-contact.service';
 
 describe('SheptechContactServiceService', () => {
-  let service: SheptechContactServiceService;
+  let service: SheptechContactService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SheptechContactServiceService);
+    service = TestBed.inject(SheptechContactService);
   });
 
   it('should be created', () => {
