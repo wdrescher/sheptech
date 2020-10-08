@@ -2,7 +2,7 @@
     <div class="sheptech-contact-form-container">
         <mat-form-field class="sheptech-contact-form__form-field" appearance="fill">
             <mat-label>Name</mat-label>
-            <input matInput [formControl]="formGroup.controls.name">
+            <input matInput [formControl]="formGroup.controls.name" required>
         </mat-form-field>
         <mat-form-field class="sheptech-contact-form__form-field" appearance="fill">
           <mat-label>Enter your email</mat-label>
@@ -11,7 +11,7 @@
         </mat-form-field>
         <mat-form-field class="sheptech-contact-form__form-field" appearance="fill">
             <mat-label>Coment</mat-label>
-            <textarea matInput [formControl]="formGroup.controls.comment" placeholder="Ex. I want to build an api..."></textarea>
+            <textarea matInput [formControl]="formGroup.controls.comment" placeholder="Ex. I want to build an api..." required></textarea>
         </mat-form-field>
         <button class="sheptech-contact-form__button" color="primary"type="Submit" mat-raised-button>
             <div *ngIf="!success && !isLoading">Submit</div>

@@ -3,9 +3,10 @@
   <div class="sheptech-banner">Build for tomorrow
     <button class="sheptech-banner__button" [ngxScrollTo]="'contact'">get started</button>
   </div>
+
   <div class="sheptech-content-about-us">
-    <div class="sheptech-content-about-us__title" id="about">About us</div>
-    <p class="sheptech__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="sheptech-content-about-us__body">All work is done on commission and we can get that communication started once you reach out. We would love to get in touch and see if we can help</p>
+    <div class="sheptech-content-about-us__sub-title" id="sub-header">lets get started</div>
   </div>
 
   <div class="sheptech-services" id="services">
@@ -15,9 +16,15 @@
         <div class="sheptech-services__icon-container" *ngFor="let icon of icons">
           <img class="sheptech-services__icon" [src]="icon.url"/>
           <div class="sheptech-services__icon-description">{{icon.description}}</div>
+          <div class="sheptech-services__icon-about">{{icon.about}}</div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="sheptech-content-about-us">
+    <div class="sheptech-content-about-us__title" id="about">About us</div>
+    <p class="sheptech__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
   <div class="sheptech-contact" id="contact">

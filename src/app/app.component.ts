@@ -11,19 +11,23 @@ export class AppComponent {
   icons = [
     {
       url: "assets/cloud.svg", 
-      description: "cloud"
+      description: "cloud",
+      about: "we build using aws"
     }, 
     {
       url: "assets/layers.svg", 
-      description: "full stack"
+      description: "full stack", 
+      about: "we build front and back end"
     },
     {
       url: "assets/safebox.svg", 
-      description: "security"
+      description: "security", 
+      about: "ssl encription and best practices"
     },
     {
       url: "assets/share.svg", 
-      description: "integration"
+      description: "integration", 
+      about: "build directly into your companies web presence"
     }
   ]
 }

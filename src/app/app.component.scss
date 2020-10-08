@@ -90,6 +90,7 @@ $icon-height: 50px;
                 justify-content: center;
                 align-items: center;
                 margin: 8px; 
+                width: 200px; 
             }
 
             &-description {
@@ -98,6 +99,13 @@ $icon-height: 50px;
                 font-size: 18px; 
                 text-transform: lowercase;
                 font-weight: 100;
+            }
+
+            &-about {
+                margin-top: 10px; 
+                color: white; 
+                font-weight: 100; 
+                font-size: 12px; 
             }
         }
     }
@@ -110,6 +118,19 @@ $icon-height: 50px;
             @extend .sheptech__subheader;
             margin-bottom: 20px; 
         }
+
+        &__sub-title {
+            font-weight: 100; 
+            text-transform: uppercase;           
+            font-size: 30px; 
+            margin: auto;
+            width: 20%;  
+        }
+
+        &__body {
+            @extend .sheptech__body; 
+            width: 30%; 
+        }
     }
 
     &__subheader {
@@ -121,8 +142,8 @@ $icon-height: 50px;
     &__body {
         margin: auto; 
         color: black; 
-        font-size: 30px; 
         text-align: justify;
+        font-size: 20px; 
         max-width: 70%;
         line-height: 1.5;
         font-weight: 100;
